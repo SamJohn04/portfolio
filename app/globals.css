@@ -55,6 +55,7 @@
   --text: #F1FAFF;
   --border: #2B425755;
   --emphasis: #D6AD604f;
+  --emphasis-opaque: #D6AD60;
   --text-gradient-start: #7953CD;
   --text-gradient-step: #00AFFA;
   --text-gradient-step-short: #0190CD;
@@ -69,6 +70,7 @@
     --secondary: #88A9C3;
     --text-bold: #091235;
     --emphasis: #FFCDA24F;
+    --emphasis-opaque: #FFCDA2;
   }
 }
 
@@ -97,6 +99,21 @@ body {
     /* transparent 58% */
     );
   background-size: 500%;
+}
+
+.gilded-corners::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  background: radial-gradient(
+    transparent 70%,
+    var(--emphasis) 100%
+  );
 }
 
 .focused {
@@ -131,4 +148,28 @@ body {
 
 .avatar-link {
   left: calc(50% - 1.5rem);
+}
+
+.nav-item {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    var(--primary) 60%
+  );
+  background-size: auto 300%;
+  background-position: 0% 0%;
+}
+
+.nav-item:hover {
+  background-position: 0% 100%;
+}
+
+.self-card {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.self-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

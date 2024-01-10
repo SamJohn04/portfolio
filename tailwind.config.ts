@@ -23,6 +23,7 @@ const config: Config = {
       'secondary': 'var(--secondary)',
       'secondary-bold': 'var(--secondary-bold)',
       'emphasis': 'var(--emphasis)',
+      'emphasis-opaque': 'var(--emphasis-opaque)',
     }
   },
   plugins: [],
