@@ -173,3 +173,7 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
+.md\hidden {
+  display: none !important;
+}
