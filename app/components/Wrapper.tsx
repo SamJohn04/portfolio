@@ -29,7 +29,7 @@ export default function Wrapper({home, about, skillBoxes}: Record<string, React.
             </div>
             <div className="h-screen">
             </div>
-            <div className="flex flex-col gap-16 md:gap-64">
+            <div className="flex flex-col gap-16 md:gap-64 max-w-[95vw] m-auto">
                 <Navigation screens={screens}/>
                 <div className="w-full" ref={screens.find(val => val.title === 'Home')?.ref}>
                     {home}
