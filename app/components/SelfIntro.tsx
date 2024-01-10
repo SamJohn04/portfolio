@@ -15,8 +15,8 @@ export default function SelfIntro() {
     return (
         <div className="min-h-screen py-16 flex flex-col justify-between w-full">
             <div className="flex flex-col gap-8 justify-start w-full">
-                <h1 className="text-4xl md:text-6xl">Hello World! I'm <span className="gradient-text">Samuel John</span></h1>
-                <h1 className="text-3xl md:text-5xl overflow-hidden h-16"><span>I'm </span><ul className="title-scroll inline-flex flex-col">{titles.map((title, i) => <li key={i} className="flex items-center justify-start h-16">{title}</li>)}</ul>
+                <h1 className="text-4xl md:text-6xl">Hello World! I&apos;m <span className="gradient-text">Samuel John</span></h1>
+                <h1 className="text-3xl md:text-5xl overflow-hidden h-16"><span>I&apos;m </span><ul className="title-scroll inline-flex flex-col">{titles.map((title, i) => <li key={i} className="flex items-center justify-start h-16">{title}</li>)}</ul>
                 </h1>
             </div>
             <Avatar />
