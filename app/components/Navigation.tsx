@@ -2,11 +2,11 @@ import { Close, Menu } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import React, { RefObject } from "react";
 
-export default function Navigation({ screens }: {screens: {title: string, ref?: RefObject<HTMLDivElement>}[]}) {
+export default function Navigation({ screens }: {screens: {title: string, ref: RefObject<HTMLDivElement>}[]}) {
     const [open, setOpen] = React.useState(false);
 
-    const handleNavClick = (screen: {title: string, ref?: RefObject<HTMLDivElement>}) => {
-        screen.ref?.current?.scrollIntoView({behavior: 'smooth'});
+    const handleNavClick = (screen: {title: string, ref: RefObject<HTMLDivElement>}) => {
+        screen.ref.current?.scrollIntoView({behavior: 'smooth'});
         setOpen(false);
     };
 
